@@ -1,0 +1,25 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    fname:
+        label: First Name
+        disabled: false
+        span: auto
+    lname:
+        label: Last First
+        disabled: false
+        span: auto
+    email:
+        label: Email
+        disabled: false
+        span: auto
+    phone:
+        label: Phone Number
+        disabled: false
+        span: auto
+    location:
+        label: Location
+        disabled: false
+        span: auto

@@ -1,0 +1,17 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    trxn_id:
+        label: Trxn_id
+        searchable: true
+    customer_email:
+        label: Email
+        searchable: true
+    status:
+        label: Status
+        searchable: true
+    paid_at:
+        label: Date
+        searchable: true

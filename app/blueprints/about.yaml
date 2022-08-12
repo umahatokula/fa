@@ -1,0 +1,44 @@
+uuid: 448a8b6e-e812-4b51-83fb-3b4c2f946703
+handle: About
+type: single
+name: About
+drafts: true
+
+navigation:
+    icon: icon-rocket
+
+fields:
+
+    big_text:
+        label: Big Text
+        type: text
+        size: small
+        
+    small_text:
+        label: Small Text
+        type: text
+        size: small
+        
+    about:
+        label: About
+        type: richeditor
+        size: small
+        span: auto
+        
+    location:
+        label: Location
+        type: richeditor
+        size: small
+        span: auto
+        
+    speakers:
+        label: Speakers
+        type: richeditor
+        size: small
+        span: auto
+        
+    time_date:
+        label: Time and Date
+        type: richeditor
+        size: small
+        span: auto

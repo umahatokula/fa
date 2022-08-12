@@ -1,0 +1,21 @@
+plugin:
+    name: 'umaha.centres::lang.plugin.name'
+    description: 'CFC centres worldwide'
+    author: Umaha
+    icon: oc-icon-home
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Centres
+        url: umaha/centres/centres
+        icon: icon-life-ring
+        permissions:
+            - add_centre
+            - delete_centre
+permissions:
+    add_centre:
+        tab: 'CFC Centres'
+        label: 'Add Centre'
+    delete_centre:
+        tab: 'CFC Centres'
+        label: 'Delete Centre'

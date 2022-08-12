@@ -1,0 +1,5 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table umaha_centres_'
+    - builder_table_create_umaha_centres_.php

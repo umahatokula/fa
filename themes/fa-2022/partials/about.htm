@@ -1,0 +1,60 @@
+[section about]
+handle = "About"
+==
+<section id="about" class="bg-white-2">
+    <div class="container">
+        <div class="row no-padding-rl no-padding-top padding-8">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <h3
+                    class="font-family-alt font-weight-700 letter-spacing-2 text-uppercase xs-title-small title-medium title-sideline-base-color">
+                    {{ about.big_text }}</h3>
+                <p class="font-family-alt margin-3 no-margin-bottom no-margin-rl text-gray-dark-2 text-large">{{ about.small_text }}</p>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-5 xs-text-center">
+                {{ about.about | raw }}
+            </div>
+
+            <div class="col-md-6 col-md-offset-1">
+                <div class="row">
+                    <div
+                        class="col-sm-6 xs-margin-10 sm-margin-5 xs-no-margin-bottom sm-no-margin-bottom xs-no-margin-rl sm-no-margin-rl xs-text-center">
+                        <i class="fa fa-map-marker display-block text-base-color title-extra-large-2"></i>
+                        <span
+                            class="display-block font-family-alt font-weight-700 letter-spacing-1 margin-5 no-margin-bottom no-margin-rl text-large text-uppercase">Location</span>
+                        <p class="margin-3 no-margin-bottom no-margin-rl text-large text-gray-dark-2">
+                            {{ about.location | raw }}
+                        </p>
+                    </div>
+
+                    <div class="col-sm-6 sm-margin-5 sm-no-margin-bottom sm-no-margin-rl xs-text-center">
+                        <i class="fa fa-bullhorn display-block text-base-color title-extra-large-2"></i>
+                        <span
+                            class="display-block font-family-alt font-weight-700 letter-spacing-1 margin-5 no-margin-bottom no-margin-rl text-large text-uppercase">Speakers</span>
+                        <p class="margin-3 no-margin-bottom no-margin-rl text-large text-gray-dark-2">
+                            {{ about.speakers | raw }}
+                        </p>
+                    </div>
+
+                    <div class="col-sm-6 margin-5 no-margin-bottom no-margin-rl xs-text-center">
+                        <i class="fa fa-clock-o display-block text-base-color title-extra-large-2"></i>
+                        <span
+                            class="display-block font-family-alt font-weight-700 letter-spacing-1 margin-5 no-margin-bottom no-margin-rl text-large text-uppercase">Date
+                                & Time</span>
+                        <p class="margin-3 no-margin-bottom no-margin-rl text-large text-gray-dark-2">
+                            {{ about.time_date | raw }}
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

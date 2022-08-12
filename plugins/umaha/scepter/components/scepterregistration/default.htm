@@ -1,0 +1,529 @@
+
+<p>Fields marked <span style="color: red;">*</span> are required</p>
+
+<form
+    data-request="onRegister"
+    data-request-validate
+    data-request-flash
+    data-request-files
+    data-request-success="console.log(data); document.getElementById( 'dp_image' ).src = data.personalized_dp ? data.personalized_dp.path : ''; document.getElementById( 'dp_image' ).style.display = 'inline'; document.getElementById('regForm').reset(); $('#registerModal').modal('hide'); $('#thankYouModal').modal({
+    backdrop: 'static',
+    keyboard: false
+}); $('#thankYouModal').css('overflow-y', 'auto'); document.getElementById( 'download_dp' ).href = data.personalized_dp ? data.personalized_dp.path : ''; data.personalized_dp ? document.getElementById( 'download_dp' ).style.display = 'inline' : document.getElementById( 'download_dp' ).style.display = 'none';"
+    class=""
+    id="regForm">
+
+
+
+    <div class="form-row">
+
+        {% if __SELF__.property('title') %}
+        <div class="col-lg-6 col-sm-12 col-md-6  pt-50 {{ errors.has('title') ? 'has-error' : '' }}">
+            <label for="title">
+                Title
+            </label>
+            <select class="form-control form-control-lg" id="title" name="title" title="Title">
+                <option value="">
+                    -- Select One --
+                </option>
+                <option value="Pastor">
+                    Apostle
+                </option>
+                <option value="Pastor">
+                    Evangelist
+                </option>
+                <option value="Pastor">
+                    Prophet
+                </option>
+                <option value="Pastor">
+                    Pastor
+                </option>
+                <option value="Bishop">
+                    Bishop
+                </option>
+                <option value="Rev.">
+                    Rev
+                </option>
+                <option value="Mr">
+                    Mr
+                </option>
+                <option value="Mrs">
+                    Mrs
+                </option>
+                <option value="Miss">
+                    Miss
+                </option>
+            </select>
+            <small>
+                <span class="text-danger" data-validate-for="title"></span>
+            </small>
+        </div>
+        {% endif %}
+
+        <div class="col-lg-6 col-sm-12 col-md-6  pt-50 {{ errors.has('name') ? 'has-error' : '' }}">
+            <label for="name">
+                Name <span style="color: red;">*</span>
+            </label>
+            <input class="form-control form-control-lg" id="" name="name" placeholder="" title="Name" type="text">
+            </input>
+            <small>
+                <span class="text-danger" data-validate-for="name"></span>
+            </small>
+        </div>
+
+        {% if __SELF__.property('gender') %}
+        <div class="col-lg-6 col-sm-12 col-md-6  pt-50 {{ errors.has('gender') ? 'has-error' : '' }}">
+            <label>GENDER</label>
+            <div class="d-flex">
+                <div class="">
+                    <div
+                        class="form-check checkbox form-check-inline d-flex justify-content-center border text-center">
+                        <input class="form-check-input" name="gender" title="Male" type="radio" value="Male"
+                               value="Yes" id="Male" checked>
+                        <label class="form-check-label ml-2" for="Male">
+                            Male
+                        </label>
+                    </div>
+                </div>
+                <div class="">
+                    <div
+                        class="form-check checkbox form-check-inline d-flex justify-content-center border text-center">
+                        <input class="form-check-input" name="gender" title="Female" type="radio" value="Female" id="Female">
+                        <label class="form-check-label ml-2" for="Female">
+                            Female
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if __SELF__.property('marital_status') %}
+        <div class="col-lg-6 col-sm-12 col-md-6  pt-50 {{ errors.has('marital_status') ? 'has-error' : '' }}">
+            <label class="" for="marital_status">
+                Marital status
+            </label>
+            <select class="form-control form-control-lg" id="marital_status" name="marital_status" title="Marital status">
+                <option value="">
+                    -- Select One --
+                </option>
+                <option value="Married">
+                    Married
+                </option>
+                <option value="Single">
+                    Single
+                </option>
+                <option value="Divorced">
+                    Divorced
+                </option>
+                <option value="Seperated">
+                    Seperated
+                </option>
+            </select>
+            <small>
+                <span class="text-danger" data-validate-for="marital_status"></span>
+            </small>
+        </div>
+        {% endif %}
+
+        <div class="col-lg-6 col-sm-12 col-md-6  pt-50">
+            <label class="" for="phone">
+                Phone number <span style="color: red;">*</span>
+            </label>
+            <input class="form-control form-control-lg" id="phone" name="phone" pattern="" title="Phone number" type="number">
+            </input>
+            <small>
+                <span class="text-danger" data-validate-for="phone"></span>
+            </small>
+        </div>
+
+        {% if __SELF__.property('email') %}
+        <div class="col-lg-6 col-sm-12 col-md-6  pt-50 {{ errors.has('email') ? 'has-error' : '' }}">
+            <label class="" for="email">
+                Email
+            </label>
+            <input class="form-control form-control-lg" id="email" name="email" title="Email" type="email" value="">
+            </input>
+            <small>
+                <span class="text-danger" data-validate-for="email"></span>
+            </small>
+        </div>
+        {% endif %}
+
+        {% if __SELF__.property('is_partner') %}
+        <div class="col-lg-6 col-sm-12 pt-50">
+            <label>Are you a partner?</label>
+            <div class="d-flex">
+                <div class="">
+                    <div
+                        class="form-check checkbox form-check-inline d-flex justify-content-center border text-center">
+                        <input class="form-check-input" type="radio" name="is_partner" id="Yes"  title="Yes"value="1" checked>
+                        <label class="form-check-label ml-2" for="Yes">
+                            Yes
+                        </label>
+                    </div>
+                </div>
+                <div class="">
+                    <div
+                        class="form-check checkbox form-check-inline d-flex justify-content-center border text-center">
+                        <input class="form-check-input" type="radio" name="is_partner" id="No"  title="No" value="0">
+                        <label class="form-check-label ml-2" for="No">
+                            No
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if __SELF__.property('occupation') %}
+        <div class="col-lg-6 col-sm-12 col-md-6  pt-50">
+            <label class="" for="occupation">
+                Occupation
+            </label>
+            <input class="form-control form-control-lg" id="occupation" name="occupation" title="Occupation" type="text">
+            </input>
+        </div>
+        {% endif %}
+
+        {% if __SELF__.property('location') %}
+        <div class="col-lg-6 col-sm-12 col-md-6  pt-50">
+            <label class="" for="location">
+                Location <span style="color: red;">*</span>
+            </label>
+            <input class="form-control form-control-lg" id="location" name="location" title="Occupation" type="text">
+            </input>
+            <small>
+                <span class="text-danger" data-validate-for="location"></span>
+            </small>
+        </div>
+        {% endif %}
+
+        {% if __SELF__.property('address') %}
+        <div class="col-lg-6 col-sm-12 col-md-6  pt-50">
+            <label class="" for="address">
+                Your address
+            </label>
+            <input class="form-control form-control-lg" id="address" name="address" title="Your address" type="text">
+            </input>
+        </div>
+        {% endif %}
+
+        {% if __SELF__.property('cfc_center') %}
+        <div class="col-lg-6 col-sm-12 col-md-6  pt-50">
+            <label class="" for="cfc_center">
+                CFC Center
+            </label>
+            <select class="form-control form-control-lg" id="cfc_center" name="cfc_center" title="CFC Center" type="text">
+                {% for centre in centres %}
+                <option value="{{ centre.name }}">{{ centre.name }}</option>
+                {% endfor %}
+            </select>
+            </input>
+        </div>
+        {% endif %}
+
+        {% if __SELF__.property('service_team') %}
+        <div class="col-lg-6 col-sm-12 col-md-6  pt-50">
+            <label class="" for="service_team">
+                Service Team
+            </label>
+            <input class="form-control form-control-lg" id="service_team" name="service_team" title="Service Team" type="text">
+            </input>
+        </div>
+        {% endif %}
+        {% if __SELF__.property('position_held') %}
+        <div class="col-lg-6 col-sm-12 col-md-6  pt-50">
+            <label class="" for="position_held">
+                Position Held
+            </label>
+            <input class="form-control form-control-lg" id="position_held" name="position_held" title="Position Held" type="text">
+            </input>
+        </div>
+        {% endif %}
+
+        {% if __SELF__.property('church_name') %}
+        <div class="col-lg-6 col-sm-12 col-md-6  pt-50">
+            <label class="" for="church_name">
+                The name of your church
+            </label>
+            <input class="form-control form-control-lg" id="church_name" name="church_name" title="The name of your church" type="text">
+            </input>
+        </div>
+        {% endif %}
+        {% if __SELF__.property('pastor_name') %}
+        <div class="col-lg-6 col-sm-12 col-md-6  pt-50">
+            <label class="" for="pastor_name">
+                Your pastor's name
+            </label>
+            <input class="form-control form-control-lg" id="pastor_name" name="pastor_name" title="Your pastor's name" type="text">
+            </input>
+        </div>
+        {% endif %}
+
+        {% if __SELF__.property('spouse') %}
+        <div class="col-lg-6 col-sm-12 pt-50">
+            <label>Are you coming with your spouse?</label>
+            <div class="d-flex">
+                <div class="">
+                    <div class="form-check checkbox form-check-inline d-flex justify-content-center border text-center">
+                        <input class="form-check-input" id="spouse_yes" name="spouse" title="Yes" type="radio" value="1" checked>
+                        <label class="form-check-label ml-2" for="spouse_yes">
+                            Yes
+                        </label>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="form-check checkbox form-check-inline d-flex justify-content-center border text-center">
+                        <input class="form-check-input" id="spouse_no" name="spouse" title="No" type="radio" value="0">
+                        <label class="form-check-label ml-2" for="spouse_no">
+                            No
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if __SELF__.property('children') %}
+        <div class="col-lg-6 col-sm-12 pt-50">
+            <label>Are you coming with your children?</label>
+            <div class="d-flex">
+                <div class="">
+                    <div class="form-check checkbox form-check-inline d-flex justify-content-center border text-center">
+                        <input class="form-check-input" id="children_yes" name="children" title="Yes" type="radio" value="1" checked>
+                        <label class="form-check-label ml-2" for="children_yes">
+                            Yes
+                        </label>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="form-check checkbox form-check-inline d-flex justify-content-center border text-center">
+                        <input class="form-check-input" id="children_no" name="children" title="No" type="radio" value="0">
+                        <label class="form-check-label ml-2" for="children_no">
+                            No
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if __SELF__.property('children_no') %}
+        <div class="col-lg-6 col-sm-12 col-md-6  pt-50 {{ errors.has('children_no') ? 'has-error' : '' }}">
+            <label class="" for="children_no">
+                Number of children
+            </label>
+            <input class="form-control form-control-lg" id="children_no" name="children_no" title="Number of children" type="number" value="0">
+            </input>
+            <small>
+                <span class="text-danger" data-validate-for="children_no"></span>
+            </small>
+        </div>
+        {% endif %}
+
+        {% if __SELF__.property('children_ages') %}
+        <div class="col-lg-6 col-sm-12 col-md-6  pt-50 {{ errors.has('children_ages') ? 'has-error' : '' }}">
+            <label class="" for="children_ages">
+                Children Ages <small>(comma seperated)</small>
+            </label>
+            <input class="form-control form-control-lg" id="children_ages" name="children_ages" title="Children ages" type="text" placeholder="example 5, 9, 15">
+            </input>
+            <small>
+                <span class="text-danger" data-validate-for="children_ages"></span>
+            </small>
+        </div>
+        {% endif %}
+
+        {% if __SELF__.property('accommodation') %}
+        <div class="col-lg-6 col-sm-12 pt-50">
+            <label>Do you require accommodation during this event?</label>
+            <div class="d-flex">
+                <div class="">
+                    <div class="form-check checkbox form-check-inline d-flex justify-content-center border text-center">
+                        <input class="form-check-input" id="accommodation_yes" name="accommodation" title="Yes" type="radio" value="1" checked>
+                        <label class="form-check-label ml-2" for="accommodation_yes">
+                            Yes
+                        </label>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="form-check checkbox form-check-inline d-flex justify-content-center border text-center">
+                        <input class="form-check-input" id="accommodation_no" name="accommodation" title="No" type="radio" value="0">
+                        <label class="form-check-label ml-2" for="accommodation_no">
+                            No
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if __SELF__.property('feeding') %}
+        <div class="col-lg-6 col-sm-12 pt-50">
+            <label>Do you require feeding during this event?</label>
+            <div class="d-flex">
+                <div class="">
+                    <div class="form-check checkbox form-check-inline d-flex justify-content-center border text-center">
+                        <input class="form-check-input" id="feeding_yes" name="feeding" title="Yes" type="radio" value="1" checked>
+                        <label class="form-check-label ml-2" for="feeding_yes">
+                            Yes
+                        </label>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="form-check checkbox form-check-inline d-flex justify-content-center border text-center">
+                        <input class="form-check-input" id="feeding_no" name="feeding" title="No" type="radio" value="0">
+                        <label class="form-check-label ml-2" for="feeding_no">
+                            No
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if __SELF__.property('transportation') %}
+        <div class="col-lg-6 col-sm-12 pt-50">
+            <label>Do you require transportation during this event?</label>
+            <div class="d-flex">
+                <div class="">
+                    <div class="form-check checkbox form-check-inline d-flex justify-content-center border text-center">
+                        <input class="form-check-input" id="transportation_yes" name="transportation" title="Yes" type="radio" value="1" checked>
+                        <label class="form-check-label ml-2" for="transportation_yes">
+                            Yes
+                        </label>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="form-check checkbox form-check-inline d-flex justify-content-center border text-center">
+                        <input class="form-check-input" id="transportation_no" name="transportation" title="No" type="radio" value="0">
+                        <label class="form-check-label ml-2" for="transportation_no">
+                            No
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if __SELF__.property('coming_with_car') %}
+        <div class="col-lg-6 col-sm-12 pt-50">
+            <label>Do you require transportation during this event?</label>
+            <div class="d-flex">
+                <div class="">
+                    <div class="form-check checkbox form-check-inline d-flex justify-content-center border text-center">
+                        <input class="form-check-input" id="coming_with_car_yes" name="coming_with_car" title="Yes" type="radio" value="1" checked>
+                        <label class="form-check-label ml-2" for="coming_with_car_yes">
+                            Yes
+                        </label>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="form-check checkbox form-check-inline d-flex justify-content-center border text-center">
+                        <input class="form-check-input" id="coming_with_car_no" name="coming_with_car" title="No" type="radio" value="0">
+                        <label class="form-check-label ml-2" for="coming_with_car_no">
+                            No
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if __SELF__.property('assist_with_car') %}
+        <div class="col-lg-6 col-sm-12 pt-50">
+            <label>Do you require transportation during this event?</label>
+            <div class="d-flex">
+                <div class="">
+                    <div class="form-check checkbox form-check-inline d-flex justify-content-center border text-center">
+                        <input class="form-check-input" id="assist_with_car_yes" name="assist_with_car" title="Yes" type="radio" value="1" checked>
+                        <label class="form-check-label ml-2" for="assist_with_car_yes">
+                            Yes
+                        </label>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="form-check checkbox form-check-inline d-flex justify-content-center border text-center">
+                        <input class="form-check-input" id="assist_with_car_no" name="assist_with_car" title="No" type="radio" value="0">
+                        <label class="form-check-label ml-2" for="assist_with_car_no">
+                            No
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if Registration.property('attendance_mode') %}
+        <div class="col-lg-6 col-sm-12 pt-50">
+            <label>Will you be attending onsite or online?</label>
+            <div class="d-flex">
+                <div class="">
+                    <div class="form-check checkbox form-check-inline d-flex justify-content-center border text-center">
+                        <input class="form-check-input" id="attendance_mode_yes" name="attendance_mode" title="Onsite" type="radio" value="Onsite" checked>
+                        <label class="form-check-label ml-2" for="attendance_mode_yes">
+                            Onsite
+                        </label>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="form-check checkbox form-check-inline d-flex justify-content-center border text-center">
+                        <input class="form-check-input" id="attendance_mode_no" name="attendance_mode" title="Online" type="radio" value="Online">
+                        <label class="form-check-label ml-2" for="attendance_mode_no">
+                            Online
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if __SELF__.property('arrival_date') %}
+        <div class="col-lg-6 col-sm-12 col-md-6  pt-50 {{ errors.has('arrival_date') ? 'has-error' : '' }}">
+            <label class="" for="arrival_date">
+                Date of arrival
+            </label>
+            <input class="form-control form-control-lg" id="arrival_date" name="arrival_date" title="Date of arrival" type="date">
+            </input>
+            <small>
+                <span class="text-danger" data-validate-for="arrival_date"></span>
+            </small>
+        </div>
+        {% endif %}
+
+        {% if __SELF__.property('departure_date') %}
+        <div class="col-lg-6 col-sm-12 col-md-6 pt-50 {{ errors.has('departure_date') ? 'has-error' : '' }}">
+            <label class="" for="departure_date">
+                Date of departure
+            </label>
+            <input class="form-control form-control-lg" id="departure_date" name="departure_date" title="Date of departure" type="date">
+            </input>
+            <small>
+                <span class="text-danger" data-validate-for="departure_date"></span>
+            </small>
+        </div>
+        {% endif %}
+
+        <div class="col-lg-6 col-sm-12 col-md-6 pt-50 {{ errors.has('departure_date') ? 'has-error' : '' }}">
+            <label class="" for="departure_date">
+                Upload your picture for a personalized DP (optional)
+            </label>
+            <input class="form-control form-control-lg" id="departure_date" name="personalized_dp" type="file">
+            </input>
+            <small>
+                <span class="text-danger" data-validate-for="departure_date"></span>
+            </small>
+        </div>
+
+    </div>
+
+    <div class="text-center pt-100 pb-20">
+        <button data-attach-loading type="submit" class="btn btn-lg btn-danger text-white register-btn btn-h7" style="padding: 10px border-radius: 4px; background-image: none;">Register</button>
+    </div>
+
+    <div class="text-center pt-20 pb-50">
+        <p class="text-muted">Register your kids <a class="theme-color-text" href="https://docs.google.com/forms/d/e/1FAIpQLSfEmnTociF-C623upbpYNRBYXwNVBWFOQ7mopw5KUq1Vqjn2A/viewform" target="_blank">here</a></p>
+    </div>
+
+</form>

@@ -1,0 +1,4 @@
+title: Centres
+modelClass: Umaha\Centres\Models\Centre
+toolbar:
+    buttons: reorder_toolbar

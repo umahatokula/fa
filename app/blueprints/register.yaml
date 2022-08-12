@@ -1,0 +1,20 @@
+uuid: 2790e114-91ec-41b1-beb5-89475d36eada
+handle: Register
+type: single
+name: Register
+drafts: true
+
+navigation:
+    icon: icon-rocket
+
+fields:
+    small_text:
+        label: Small Text
+        type: text
+        size: small
+
+    big_text:
+        label: Big Text
+        type: richeditor
+        size: small
+        

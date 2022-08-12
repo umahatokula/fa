@@ -1,0 +1,37 @@
+fields:
+
+    all_registrants:
+        label: Send to ALL registrants
+        type: switch
+        comment: If ON, selected event will be disregarded
+        on: Yes
+        off: No
+
+    event_code:
+        label: Select a year
+        type: dropdown
+        trigger:
+            field: all_registrants
+            condition: checked
+            action: disable
+        
+    subject:
+        label: Message subject
+        type: text
+        placeholder: Type the email subject here
+        required: true
+
+    # mail_template:
+    #     label: Select an a mail template
+    #     type: dropdown
+
+    message:
+        label: 'Type the message'
+        size: ''
+        oc.commentPosition: ''
+        span: full
+        type: richeditor
+        size: giant
+        required: true
+        # toolbarButtons: bold|italic|underline|strikeThrough|subscript|superscript|fontFamily|fontSize|||color|emoticons|inlineStyle|paragraphStyle|||paragraphFormat|align|formatOL|formatUL|outdent|indent|quote|insertHR|-|insertLink|insertImage|insertVideo|insertAudio|insertFile|insertTable|undo|redo|clearFormatting|selectAll|html
+        # dependsOn: mail_template

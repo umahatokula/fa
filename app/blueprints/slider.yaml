@@ -1,0 +1,29 @@
+uuid: aee415ad-576d-4c60-9076-cbd674b16123
+handle: Slider
+type: single
+name: Slider
+drafts: true
+
+navigation:
+    icon: icon-rocket
+
+fields:
+    big_text:
+        label: Big Text
+        type: text
+        size: small
+        
+    small_text:
+        label: Small Text
+        type: text
+        size: small
+        
+    button_text:
+        label: Button Text
+        type: text
+        size: small
+        
+    button_url:
+        label: Button URL
+        type: text
+        size: small

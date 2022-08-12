@@ -1,0 +1,16 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Mail
+
+# Model Form Field configuration
+form: $/umaha/scepter/models/mailsender/fields.yaml
+
+# Model Class name
+modelClass: Umaha\Scepter\Models\MailSender
+
+# Default redirect location
+defaultRedirect: umaha/scepter/mails
+

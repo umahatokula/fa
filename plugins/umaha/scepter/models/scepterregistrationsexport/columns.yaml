@@ -1,0 +1,46 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    fname:
+        label: First Name
+        disabled: false
+        searchable: true
+    lname:
+        label: Last First
+        disabled: false
+        searchable: true
+    email:
+        label: Email
+        disabled: false
+        searchable: true
+    phone:
+        label: Phone Number
+        disabled: false
+        searchable: true
+    location:
+        label: Location
+        disabled: false
+        searchable: true
+    gender:
+        label: Gender
+        disabled: false
+        searchable: true
+    occupation:
+        label: Occupation
+        disabled: false
+        searchable: true
+    materials:
+        label: Materials
+        disabled: false
+        searchable: true
+    is_cfc_member:
+        label: Is a CFC member
+        disabled: false
+        searchable: true
+    cfc_campus:
+        label: CFC Campus
+        disabled: false
+        searchable: true
+

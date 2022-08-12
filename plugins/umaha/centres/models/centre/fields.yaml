@@ -1,0 +1,29 @@
+fields:
+    name:
+        label: Name
+        span: left
+        type: text
+    slug:
+        label: Slug
+        span: left
+        preset:
+            field: name
+            type: slug
+        type: text
+    pastor:
+        label: 'Resident Pastor'
+        span: left
+        type: text
+    phone:
+        label: Hotline
+        span: left
+        type: text
+    email:
+        label: Email
+        span: left
+        type: text
+    address:
+        label: Address
+        span: left
+        size: large
+        type: textarea

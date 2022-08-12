@@ -1,0 +1,35 @@
+uuid: eeecff72-1fbf-4968-8c3f-e0a59ac23da9
+handle: Introduction
+type: single
+name: Introduction
+drafts: true
+
+navigation:
+    icon: icon-rocket
+
+fields:
+        
+    small_text:
+        label: Small Text
+        type: text
+        size: small
+
+    big_text:
+        label: Big Text
+        type: text
+        size: small
+        
+    text1:
+        label: Text 1
+        type: text
+        size: small
+        
+    text2:
+        label: Text 2
+        type: text
+        size: small
+        
+    text3:
+        label: Text 3
+        type: text
+        size: small

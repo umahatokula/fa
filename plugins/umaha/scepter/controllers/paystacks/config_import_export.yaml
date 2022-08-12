@@ -1,0 +1,13 @@
+# ===================================
+#  Import/Export Behavior Config
+# ===================================
+
+# import:
+#     title: Import subscribers
+#     modelClass: Acme\Campaign\Models\SubscriberImport
+#     list: $/acme/campaign/models/subscriber/columns.yaml
+
+export:
+    title: Export Registrants
+    modelClass: Umaha\Scepter\Models\ScepterPaymentsExport
+    list: $/umaha/scepter/models/paystackexport/columns.yaml

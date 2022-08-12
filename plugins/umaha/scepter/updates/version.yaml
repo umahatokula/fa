@@ -1,0 +1,71 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table umaha_events_'
+    - builder_table_create_umaha_events_.php
+1.0.3:
+    - 'Updated table umaha_events_'
+    - builder_table_update_umaha_events_.php
+1.0.4:
+    - 'Created table umaha_events_event_preacher'
+    - builder_table_create_umaha_events_event_preacher.php
+1.0.5:
+    - 'Created table umaha_events_registrations'
+    - builder_table_create_umaha_events_registrations.php
+1.0.6:
+    - 'Updated table umaha_events_registrations'
+    - builder_table_update_umaha_events_registrations.php
+1.0.7:
+    - 'Updated table umaha_events_registrations'
+    - builder_table_update_umaha_events_registrations_2.php
+1.0.8:
+    - 'Created table umaha_events_schedules'
+    - builder_table_create_umaha_events_schedules.php
+1.0.9:
+    - 'Updated table umaha_events_'
+    - builder_table_update_umaha_events__2.php
+1.0.10:
+    - 'Updated table umaha_events_'
+    - builder_table_update_umaha_events__3.php
+1.0.11:
+    - 'Updated table umaha_events_'
+    - builder_table_update_umaha_events__4.php
+1.0.12:
+    - 'Updated table umaha_events_schedules'
+    - builder_table_update_umaha_events_schedules.php
+1.0.13:
+    - 'Updated table umaha_events_schedules'
+    - builder_table_update_umaha_events_schedules_2.php
+1.0.14:
+    - 'Updated table umaha_events_schedules'
+    - builder_table_update_umaha_events_schedules_3.php
+1.0.15:
+    - 'Updated table umaha_events_schedules'
+    - builder_table_update_umaha_events_schedules_4.php
+1.0.16:
+    - 'Updated table umaha_events_registrations'
+    - builder_table_update_umaha_events_registrations_3.php
+1.0.17:
+    - 'Updated table umaha_events_registrations'
+    - builder_table_update_umaha_events_registrations_4.php
+1.0.18:
+    - 'Updated table umaha_events_registrations'
+    - builder_table_update_umaha_events_registrations_5.php
+1.0.19:
+    - 'Updated table umaha_events_registrations'
+    - builder_table_update_umaha_events_registrations_6.php
+1.0.20:
+    - 'Updated table umaha_events_registrations'
+    - builder_table_update_umaha_events_registrations_7.php
+1.0.21:
+    - 'Updated table umaha_events_registrations'
+    - builder_table_update_umaha_events_registrations_8.php
+1.0.22:
+    - 'Updated table umaha_events_registrations'
+    - builder_table_update_umaha_events_registrations_9.php
+1.0.23:
+    - 'Updated table umaha_events_registrations'
+    - builder_table_update_umaha_events_registrations_10.php
+1.0.24:
+    - 'Personalized DP'
+    - create_personalized_d_ps_table.php

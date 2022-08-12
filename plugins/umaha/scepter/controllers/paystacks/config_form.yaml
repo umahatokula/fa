@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Paystack
+
+# Model Form Field configuration
+form: $/umaha/scepter/models/paystack/fields.yaml
+
+# Model Class name
+modelClass: Umaha\Scepter\Models\Paystack
+
+# Default redirect location
+defaultRedirect: umaha/scepter/paystacks
+
+# Create page
+create:
+    title: Create Paystack
+    redirect: umaha/scepter/paystacks/update/:id
+    redirectClose: umaha/scepter/paystacks
+
+# Update page
+update:
+    title: Edit Paystack
+    redirect: umaha/scepter/paystacks
+    redirectClose: umaha/scepter/paystacks
+
+# Preview page
+preview:
+    title: Preview Paystack

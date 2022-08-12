@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Scepter Registration
+
+# Model Form Field configuration
+form: $/umaha/scepter/models/scepterregistration/fields.yaml
+
+# Model Class name
+modelClass: Umaha\Scepter\Models\ScepterRegistration
+
+# Default redirect location
+defaultRedirect: umaha/scepter/scepterregistrations
+
+# Create page
+create:
+    title: Create Scepter Registration
+    redirect: umaha/scepter/scepterregistrations/update/:id
+    redirectClose: umaha/scepter/scepterregistrations
+
+# Update page
+update:
+    title: Edit Scepter Registration
+    redirect: umaha/scepter/scepterregistrations
+    redirectClose: umaha/scepter/scepterregistrations
+
+# Preview page
+preview:
+    title: Preview Scepter Registration

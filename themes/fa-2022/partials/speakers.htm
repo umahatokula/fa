@@ -1,0 +1,62 @@
+[section speakers]
+handle = "Speakers"
+==
+<section id="speakers" class="bg-white-3">
+    <div class="container">
+        <div class="row no-padding-rl no-padding-top padding-8">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <h3
+                    class="font-family-alt font-weight-700 letter-spacing-2 text-uppercase xs-title-small title-medium title-sideline-base-color">
+                    Event Speakers</h3>
+                <p class="font-family-alt margin-3 no-margin-bottom no-margin-rl text-gray-dark-2 text-large">Know
+                    about the speakers. Lorem Ipsum is simply dummy text of the printing<br>and typesetting
+                    industry. Lorem Ipsum has been.</p>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            {% for speaker in speakers.speakers %}
+            <div class="features-box col-sm-6 col-md-3">
+                <div class="overflow-hidden position-relative width-100">
+                    <div class="position-relative">
+                        <img src="{{ speaker.picture | media }}" alt="" />
+                        <span
+                            class="bg-base-color display-inline-block font-family-alt letter-spacing-1 margin-4 padding-tb-9px padding-rl-13px position-absolute position-bottom text-extra-small text-uppercase text-white">Main
+                                Speaker</span>
+                    </div>
+
+                    <div class="bg-gray-light no-padding-rl padding-6 position-relative text-center">
+                            <span
+                                class="display-block font-family-alt font-weight-700 letter-spacing-2 text-gray-dark-2 text-small text-uppercase">{{ speaker.name }}</span>
+                    </div>
+
+                    <div
+                        class="ease height-100 padding-2 position-absolute position-top position-left show-on-hover width-100">
+                        <div class="bg-base-color height-100 width-100">
+                            <div class="display-table height-100 width-100">
+                                <div class="display-table-cell no-padding-tb padding-11 vertical-align-middle">
+                                        <span
+                                            class="display-block font-family-alt letter-spacing-2 text-medium text-uppercase text-white">{{ speaker.name }}</span>
+                                    <span
+                                        class="display-block font-family-alt letter-spacing-1 text-small text-uppercase text-white">{{ speaker.office }}</span>
+                                    <p class="margin-6 no-margin-bottom no-margin-rl text-medium text-white">{{ speaker.about | raw }}</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>

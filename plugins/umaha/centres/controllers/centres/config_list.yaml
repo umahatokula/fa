@@ -1,0 +1,12 @@
+list: $/umaha/centres/models/centre/columns.yaml
+modelClass: Umaha\Centres\Models\Centre
+title: Centres
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'umaha/centres/centres/update/:id'

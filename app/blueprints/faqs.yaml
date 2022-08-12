@@ -1,0 +1,33 @@
+uuid: 3eed98d5-356d-4caf-91e9-069fb8f4eb53
+handle: FAQs
+type: single
+name: FAQs
+drafts: true
+
+navigation:
+    icon: icon-rocket
+
+fields:
+    
+    text:
+        label: Text
+        type: text
+        size: small
+        
+    entries:
+        label: Entries
+        type: repeater
+        span: auto
+        form:
+            fields:
+                question:
+                    label: Question
+                    type: text
+                    size: small
+                    
+                answer:
+                    label: Answer
+                    type: richeditor
+                    size: small
+                    span: auto
+                    

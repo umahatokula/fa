@@ -1,0 +1,21 @@
+columns:
+    name:
+        label: Name
+        type: text
+        searchable: true
+        sortable: true
+    pastor:
+        label: 'Resident Pastor'
+        type: text
+        searchable: true
+        sortable: true
+    phone:
+        label: Hotline
+        type: text
+        searchable: true
+        sortable: true
+    email:
+        label: Email
+        type: text
+        searchable: true
+        sortable: true

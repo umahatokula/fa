@@ -1,0 +1,40 @@
+uuid: 64f5c20f-e64d-437e-bf1c-4b6ac93361a9
+handle: Hotels
+type: single
+name: Hotels
+drafts: true
+
+navigation:
+    icon: icon-rocket
+
+fields:
+    
+                    
+    text:
+        label: Text
+        type: text
+        size: small
+        
+    hotels:
+        label: Hotel
+        type: repeater
+        span: auto
+        form:
+            fields:
+                picture:
+                    label: Picture
+                    type: mediafinder
+                    size: small
+                    
+                name:
+                    label: Name
+                    type: text
+                    size: small
+                    span: auto
+                    
+                info:
+                    label: Hotel Information
+                    type: richeditor
+                    size: small
+                    span: auto
+                    

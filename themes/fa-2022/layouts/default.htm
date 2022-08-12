@@ -1,0 +1,90 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+
+    {% partial 'site/meta' %}
+    {% partial 'site/css' %}
+    {% styles %}
+</head>
+
+<body id="page-top">
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+
+<nav id="navigation" class="navbar navbar-fixed-top navbar-white">
+    <div class="container">
+        <div class="row">
+            <div class="navbar-header col-md-3">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#navbar-dione">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll font-family-alt letter-spacing-1 text-extra-large text-uppercase"
+                   href="#page-top">
+                    <img class="logo-navbar-dark" src="assets/images/logo-text-white.png" alt="" />
+                    <img class="logo-navbar-white" src="assets/images/logo-text-dark.png" alt="" />
+                </a>
+            </div>
+
+            <div id="navbar-dione" class="navbar-collapse collapse col-md-9 pull-right">
+                <ul class="nav navbar-nav font-family-alt letter-spacing-1 text-small text-uppercase">
+                    <li><a href="#about" class="page-scroll">About</a></li>
+                    <li><a href="#venue" class="page-scroll">Venue</a></li>
+                    <li><a href="#speakers" class="page-scroll">Speakers</a></li>
+                    <li><a href="#schedule" class="page-scroll">Schedule</a></li>
+                    <li><a href="#hotels" class="page-scroll">Hotels</a></li>
+                    <li><a href="#ticket" class="page-scroll">Register</a></li>
+                    <li><a href="#contact" class="page-scroll">Contact</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>
+
+{% page %}
+
+{% partial 'site/footer' %}
+
+
+<a href="#page-top" class="page-scroll scroll-to-top"><i class="fa fa-angle-up"></i></a>
+
+<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="{{ 'assets/js/jquery.min.js' | theme }}"></script>
+
+<script src="{{ 'assets/js/bootstrap.min.js' | theme }}"></script>
+
+<script src="{{ 'assets/js/pace.min.js' | theme }}"></script>
+<script src="{{ 'assets/js/debouncer.min.js' | theme }}"></script>
+<script src="{{ 'assets/js/jquery.easing.min.js' | theme }}"></script>
+<script src="{{ 'assets/js/jquery.inview.min.js' | theme }}"></script>
+<script src="{{ 'assets/js/jquery.matchHeight.js' | theme }}"></script>
+<script src="{{ 'assets/js/isotope.pkgd.min.js' | theme }}"></script>
+<script src="{{ 'assets/js/imagesloaded.pkgd.min.js' | theme }}"></script>
+<script src="{{ 'assets/js/flickity.pkgd.min.js' | theme }}"></script>
+<script src="{{ 'assets/js/jquery.countTo.js' | theme }}"></script>
+<script src="{{ 'assets/js/jquery.magnific-popup.min.js' | theme }}"></script>
+<script src="{{ 'assets/js/jquery.validate.min.js' | theme }}"></script>
+
+<script src="{{ 'assets/js/jquery.countdown.min.js' | theme }}"></script>
+
+<script src="{{ 'assets/js/main.js' | theme }}"></script>
+<script src="{{ 'assets/js/switch-style.js' | theme }}"></script>
+{% framework extras %}
+{% scripts %}
+</body>
+
+</html>

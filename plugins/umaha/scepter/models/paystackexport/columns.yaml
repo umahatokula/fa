@@ -1,0 +1,21 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    registrant_name:
+        label: Registrant
+    registrant_location:
+        label: Registrant Location
+    customer_email:
+        label: Email
+        searchable: true
+    trxn_id:
+        label: Trxn_id
+        searchable: true
+    status:
+        label: Status
+        searchable: true
+    paid_at:
+        label: Date
+        searchable: true

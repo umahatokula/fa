@@ -1,0 +1,57 @@
+[section register]
+handle = "Register"
+
+[ScepterRegistration]
+year = 1
+title = 1
+gender = 1
+marital_status = 1
+is_partner = 1
+email = 1
+occupation = 1
+location = 0
+address = 1
+church_name = 1
+pastor_name = 1
+spouse = 1
+children = 1
+children_no = 1
+accommodation = 1
+feeding = 1
+transportation = 1
+coming_with_car = 0
+assist_with_car = 0
+arrival_date = 1
+departure_date = 1
+cfc_center = 0
+service_team = 0
+position_held = 0
+attendance_mode = 0
+==
+<section id="register" class="bg-cover bg-overlay-black-6">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-7 xs-text-center">
+                    <span
+                        class="display-block font-family-alt letter-spacing-1 opacity-9 margin-7 no-margin-bottom no-margin-rl text-white text-medium text-uppercase">{{ register.small_text }}</span>
+                <h2
+                    class="display-block font-family-alt font-weight-700 letter-spacing-2 margin-5 no-margin-bottom no-margin-rl text-white xs-title-medium title-extra-large-3 text-uppercase">
+                    {{ register.big_text | raw }}</h2>
+                <span
+                    class="bg-base-color display-inline-block margin-5-5 no-margin-rl separator-line-medium-thick-long"></span>
+            </div>
+
+            <div class="col-sm-6 col-md-5">
+                <div class="form-wrapper border-round padding-8">
+                
+                    {% component 'ScepterRegistration' %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

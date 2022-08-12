@@ -1,0 +1,10 @@
+name: Centres
+form: $/umaha/centres/models/centre/fields.yaml
+modelClass: Umaha\Centres\Models\Centre
+defaultRedirect: umaha/centres/centres
+create:
+    redirect: 'umaha/centres/centres/update/:id'
+    redirectClose: umaha/centres/centres
+update:
+    redirect: umaha/centres/centres
+    redirectClose: umaha/centres/centres

@@ -1,0 +1,39 @@
+uuid: 022496b7-e1ef-4c71-84f0-a12b5659c9c8
+handle: Speakers
+type: single
+name: Speakers
+drafts: true
+
+navigation:
+    icon: icon-rocket
+
+fields:
+    
+    speakers:
+        label: Speakers
+        type: repeater
+        span: auto
+        form:
+            fields:
+                picture:
+                    label: Picture
+                    type: mediafinder
+                    size: small
+                    
+                name:
+                    label: Name
+                    type: text
+                    size: small
+                    
+                about:
+                    label: About
+                    type: richeditor
+                    size: small
+                    span: auto
+                    
+                office:
+                    label: Office
+                    type: text
+                    size: small
+                    span: auto
+                    
