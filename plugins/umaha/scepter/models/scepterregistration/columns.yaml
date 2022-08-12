@@ -1,30 +1,31 @@
-# ===================================
-#  List Column Definitions
-# ===================================
-
 columns:
-    fname:
-        label: First Name
-        disabled: false
+    name:
+        label: Name
+        type: text
         searchable: true
-    lname:
-        label: Last First
-        disabled: false
+        sortable: true
+    attendance_mode:
+        label: 'Attendance Mode'
+        type: text
         searchable: true
-    email:
-        label: Email
-        disabled: false
+        sortable: true
+    arrival_date:
+        label: 'Arrival date'
+        type: date
         searchable: true
-    phone:
-        label: Phone Number
-        disabled: false
+        sortable: true
+    departure_date:
+        label: 'Departure date'
+        type: date
         searchable: true
-    location:
-        label: Location
-        disabled: false
+        sortable: true
+    event_slug:
+        label: Year
+        type: text
         searchable: true
+        sortable: true
     created_at:
-        label: Date
-        disabled: false
+        label: 'Registration Date'
+        type: date
         searchable: true
-
+        sortable: true

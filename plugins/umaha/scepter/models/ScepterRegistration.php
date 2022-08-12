@@ -13,7 +13,7 @@ class ScepterRegistration extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'umaha_scepter_scepter_registrations';
+    public $table = 'umaha_events_registrations';
 
     /**
      * @var array Guarded fields
@@ -29,10 +29,32 @@ class ScepterRegistration extends Model
      * @var array Validation rules for attributes
      */
     public $rules = [
-        'fname' => 'required',
-        'lname' => 'required',
-        'location' => 'required',
-        'email' => 'email|required',
+        // 'title'            => 'required',
+        'name'            => 'required',
+        // 'email'           => 'email',
+        // 'phone'           => 'required',
+        // 'location'        => 'required',
+        // 'marital_status'  => 'required',
+        // 'phone'           => 'required',
+        // 'gender'          => 'required',
+        // 'is_partner'      => 'required',
+        // 'occupation'      => 'required',
+        // 'address'         => 'required',
+        // 'church_name'     => 'required',
+        // 'cfc_center'     => 'required',
+        // 'pastor_name'     => 'required',
+        // 'spouse'          => 'required',
+        // 'children'        => 'required',
+        // 'children_no'     => 'required',
+        // 'children_ages'   => 'required',
+        'attendance_mode'  => 'required',
+        // 'arrival_date'    => 'required_if:attendance_mode,Onsite',
+        // 'departure_date'  => 'required_if:attendance_mode,Onsite',
+        // 'accommodation'   => 'required',
+        // 'feeding'         => 'required',
+        // 'transportation'  => 'required',
+        // 'coming_with_car' => 'required',
+        // 'assist_with_car' => 'required',
     ];
 
     /**

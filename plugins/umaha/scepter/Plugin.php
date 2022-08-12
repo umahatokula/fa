@@ -59,21 +59,6 @@ class Plugin extends PluginBase
 
         });
 
-        // Event::listen('umaha.scepter.paystack.successful', function ($payment) {
-
-        //     // Send mail
-        //     if ($payment->customer->email) {
-        //         $vars = ['registrant' => $payment];
-
-        //         Mail::queue('umaha.scepter.paystack.successful', $vars, function($message) use ($payment) {
-
-        //             $message->to($payment->customer->email);
-
-        //         });
-        //     }
-
-        // });
-
     }
 
     /**

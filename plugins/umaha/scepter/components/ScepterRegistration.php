@@ -1,10 +1,9 @@
 <?php namespace Umaha\Scepter\Components;
 
+use Carbon\Carbon;
 use Cms\Classes\ComponentBase;
 use System\Models\File;
-use Umaha\Events\Models\Event as EventModel;
-use Umaha\Events\Models\Registration as RegistrationComp;
-use Umaha\Scepter\Models\ScepterRegistration as ScepterRegistrationModel;
+use Umaha\Scepter\Models\ScepterRegistration as RegistrationComp;
 use Yabacon\Paystack as PaystackSDK;
 use Umaha\Scepter\Models\Settings;
 use Umaha\Scepter\Models\PersonalizedDp;
@@ -206,42 +205,6 @@ class ScepterRegistration extends ComponentBase
 
             $data = post();
 
-            $rules = [
-                // 'title'            => 'required',
-                'name'            => 'required',
-                // 'email'           => 'email',
-                // 'phone'           => 'required',
-                // 'location'        => 'required',
-                // 'marital_status'  => 'required',
-                // 'phone'           => 'required',
-                // 'gender'          => 'required',
-                // 'is_partner'      => 'required',
-                // 'occupation'      => 'required',
-                // 'address'         => 'required',
-                // 'church_name'     => 'required',
-                // 'cfc_center'     => 'required',
-                // 'pastor_name'     => 'required',
-                // 'spouse'          => 'required',
-                // 'children'        => 'required',
-                // 'children_no'     => 'required',
-                // 'children_ages'   => 'required',
-                'attendance_mode'  => 'required',
-                // 'arrival_date'    => 'required_if:attendance_mode,Onsite',
-                // 'departure_date'  => 'required_if:attendance_mode,Onsite',
-                // 'accommodation'   => 'required',
-                // 'feeding'         => 'required',
-                // 'transportation'  => 'required',
-                // 'coming_with_car' => 'required',
-                // 'assist_with_car' => 'required',
-            ];
-
-            $validator = Validator::make($data, $rules);
-
-            if ($validator->fails()) {
-                throw new ValidationException($validator);
-
-            }
-
             $year = $this->property('year');;
 
             $alreadyRegistered = RegistrationComp::where([
@@ -285,8 +248,8 @@ class ScepterRegistration extends ComponentBase
             $reg->children                  = post('children');
             $reg->children_no               = post('children_no');
             $reg->children_ages             = post('children_ages');
-            $reg->arrival_date              = post('arrival_date');
-            $reg->departure_date            = post('departure_date');
+            $reg->arrival_date              = Carbon::parse(post('arrival_date'));
+            $reg->departure_date            = Carbon::parse(post('departure_date'));
             $reg->accommodation             = post('accommodation');
             $reg->feeding                   = post('feeding');
             $reg->transportation            = post('transportation');
@@ -328,7 +291,7 @@ class ScepterRegistration extends ComponentBase
             if (post('email')) {
                 $vars = ['user' => $reg];
 
-                Mail::queue('umaha.events::mail.fa2021', $vars, function($message) use ($year) {
+                Mail::queue('umaha.fa.registration.successful', $vars, function($message) use ($year) {
 
                     $message->to((array)post('email'), post('name'));
                     $message->subject('Faith Adventure' .$year);

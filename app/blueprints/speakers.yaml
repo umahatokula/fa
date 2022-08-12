@@ -8,6 +8,10 @@ navigation:
     icon: icon-rocket
 
 fields:
+    text:
+        label: Text
+        type: text
+        size: small
     
     speakers:
         label: Speakers
